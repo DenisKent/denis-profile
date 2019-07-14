@@ -1,0 +1,13 @@
+{
+  "name": "denis-production",
+  "version": "1.0.0",
+  "description": "denis-production",
+  "author": "Denis Kent",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
