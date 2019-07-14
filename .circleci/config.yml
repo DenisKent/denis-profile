@@ -13,4 +13,4 @@ jobs:
                 command: npm test
             - deploy:
                 name: digital-ocean
-                command: ssh -o "StrictHostKeyChecking no" root@134.209.168.228 "cd ~/denis-profile; git pull;docker container stop $(docker ps -a -q); docker run -p 80:8080 -d denissweat/node"
+                command: ssh -o "StrictHostKeyChecking no" root@134.209.168.228 "cd ~/denis-profile; git pull;docker container stop $(docker ps -a -q) && docker run -p 80:8080 -d denissweat/node"
