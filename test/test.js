@@ -1,4 +1,4 @@
-var assert = require('assert'),
+var assert = require('assert');
 
 describe('/', function () {
   it('should return 200', function (done) {
