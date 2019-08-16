@@ -1,19 +1,9 @@
-FROM node:10
-
-# Create app directory
-WORKDIR /
-
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
-
-# Bundle app source
-COPY . .
-
-EXPOSE 8080
-CMD [ "node", "src/server" ]
+FROM node
+ENV NPM_CONFIG_LOGLEVEL warn
+RUN mkdir -p /usr/src/app
+EXPOSE 3000
+WORKDIR /usr/src/app
+ADD package.json /usr/src/app/
+RUN npm install --production
+ADD . /usr/src/app/
+ENTRYPOINT ["npm", "start"]
