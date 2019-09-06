@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 /* eslint-disable no-console */
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 const app = express();
 
 app.use(morgan('dev'));
