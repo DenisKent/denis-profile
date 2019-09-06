@@ -9,7 +9,7 @@ jobs:
       PROJECT_ID: omni-250008
       CLUSTER_NAME: standard-cluster-1
       CLUSTER_NAME_STAG: standard-cluster-1-stag
-      CLOUDSDK_COMPUTE_ZONE: us-west2-b 
+      CLOUDSDK_COMPUTE_ZONE: europe-west2-b 
       CONTAINER_NAME: ci-cd
       IMAGE: ci-cd
       REG_ID: ci-cd
